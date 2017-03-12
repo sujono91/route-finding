@@ -3,17 +3,43 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
-                    <h1>Dashboard</h1>
-                    <uib-alert ng-repeat="news in vm.news" type="{{news.type}}" close="vm.closeAlert($index)">
-                        <strong>News!</strong>
-                        <p>{{news.msg}}</p>
-                    </uib-alert>
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4>Welcome</h4>
+                            <h4 class="pull-left">
+                                Click Map to Add Marker
+                            </h4>
+                            <button class="btn btn-success pull-right"
+                                ng-click="vm.exportMap()">
+                                Export
+                            </button>
+                            <button class="btn btn-danger pull-right"
+                                download
+                                ng-click="vm.popMarker()">
+                                Delete
+                            </button>
+                            <div class="clearfix">
+                            </div>
                         </div>
                         <div class="panel-body">
-                            Hello, {{::vm.user.firstName}}!
+                            <ng-map center="{{ vm.jktGeoLocation }}"
+                                on-click="vm.pushMarker()"
+                                id="test">
+                                <marker
+                                    ng-repeat="marker in vm.markers"
+                                    position="{{marker.lat}}, {{marker.lng}}">
+                                </marker>
+                                <directions
+                                    ng-if="vm.origin !== ''"
+                                    draggable="true"
+                                    provide-route-alternatives="true"
+                                    panel="directions-panel"
+                                    suppress-markers="true"
+                                    travel-mode="DRIVING"
+                                    waypoints="{{ vm.wayPoints }}"
+                                    origin="{{ vm.origin }}"
+                                    destination="{{ vm.destination }}">
+                                    </directions>
+                            </ng-map>
                         </div>
                     </div>
                 </div>

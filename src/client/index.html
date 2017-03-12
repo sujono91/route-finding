@@ -63,13 +63,13 @@
     <script src="/bower_components/toastr/toastr.js"></script>
     <script src="/bower_components/angular-jwt/dist/angular-jwt.js"></script>
     <script src="/bower_components/lodash/lodash.js"></script>
+    <script src="/bower_components/ngmap/build/scripts/ng-map.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:js js/app.js -->
     <!-- inject:js -->
     <script src="/src/client/app/app.module.js"></script>
-    <script src="/src/client/app/admin/admin.module.js"></script>
     <script src="/src/client/app/blocks/exception/exception.module.js"></script>
     <script src="/src/client/app/blocks/logger/logger.module.js"></script>
     <script src="/src/client/app/blocks/router/router.module.js"></script>
@@ -78,10 +78,7 @@
     <script src="/src/client/app/core/data/data.module.js"></script>
     <script src="/src/client/app/dashboard/dashboard.module.js"></script>
     <script src="/src/client/app/layout/layout.module.js"></script>
-    <script src="/src/client/app/login/login.module.js"></script>
     <script src="/src/client/app/widget/widget.module.js"></script>
-    <script src="/src/client/app/admin/admin.controller.js"></script>
-    <script src="/src/client/app/admin/admin.route.js"></script>
     <script src="/src/client/app/blocks/exception/exception-handler.provider.js"></script>
     <script src="/src/client/app/blocks/exception/exception.js"></script>
     <script src="/src/client/app/blocks/logger/logger.js"></script>
@@ -97,12 +94,12 @@
     <script src="/src/client/app/dashboard/dashboard.controller.js"></script>
     <script src="/src/client/app/dashboard/dashboard.route.js"></script>
     <script src="/src/client/app/layout/ht-top-nav.directive.js"></script>
-    <script src="/src/client/app/login/login.controller.js"></script>
-    <script src="/src/client/app/login/login.route.js"></script>
     <!-- endinject -->
 
     <!-- inject:templates:js -->
     <!-- endinject -->
     <!-- endbuild -->
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
 </body>
 </html>

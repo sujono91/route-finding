@@ -10,7 +10,7 @@
         .constant('moment', moment)
         .constant('_', _)
         .constant('constant', {
-            APP_NAME: 'Project',
+            APP_NAME: 'Route Finding',
             API_HOST: 'http://localhost:3000'
         });
 

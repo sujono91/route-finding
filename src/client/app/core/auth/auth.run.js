@@ -20,7 +20,7 @@
 
             if (!authService.isAuth()) {
                 event.preventDefault();
-                $state.go('login', {'afterLogin': to.name});
+                $state.go('dashboard', {'afterLogin': to.name});
                 return;
             }
         });
