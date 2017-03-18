@@ -1,6 +1,20 @@
-var gzippo = require('gzippo');
 var express = require('express');
 var app = express();
 
-app.use(gzippo.staticGzip('' + __dirname + '/build'));
-app.listen(process.env.PORT || 3000);
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 3000;
+
+// make express look in the public directory for assets (css/js/img)
+app.use(express.static(__dirname + '/build'));
+
+// set the home page route
+app.get('/', function(req, res) {
+
+    // make sure index is in the right directory. In this case /app/index.html
+    res.render('index');
+});
+
+app.listen(port, function() {
+    console.log('Our app is running on http://localhost:' + port);
+});
