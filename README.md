@@ -25,7 +25,8 @@ Credits to:
 - JSCS (JavaScript Code Style Checker)
 
 ### How to run in local
-- Set Environment Variable `NODE_ENV` to `build` if you wan to run the build result.
+- Set Environment Variable `NODE_ENV` to `build` if you want to run the build result in remote server.
+
 - Set `API_HOST` in `src/client/app/core/constant.js` to you local API URL
 
 - Install NodeJS (LTS Version)
