@@ -12,7 +12,8 @@
         .constant('constant', {
             APP_NAME: 'Route Finding',
             API_HOST: 'https://aqueous-plains-83586.herokuapp.com',
-            STATIC_MAP_API: 'https://maps.googleapis.com/maps/api/staticmap'
+            STATIC_MAP_API: 'https://maps.googleapis.com/maps/api/staticmap?' +
+                'key=AIzaSyDAERBv9jkVSgNHaQBYGz52Ob7kO5XNBDI'
         });
 
 })();

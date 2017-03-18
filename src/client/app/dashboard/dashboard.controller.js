@@ -141,7 +141,7 @@
         function exportMap() {
             var centerMap = vm.map.getCenter();
             var exportUrl = angular.copy(staticMapUrl);
-            exportUrl += '?center=' + centerMap.lat() + ',' + centerMap.lng();
+            exportUrl += '&center=' + centerMap.lat() + ',' + centerMap.lng();
             exportUrl += '&size=640x480';
             exportUrl += '&maptype=google.maps.MapTypeId.ROADMAP';
             exportUrl += '&zoom=' + vm.map.getZoom();
