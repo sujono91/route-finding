@@ -30,12 +30,15 @@
 
         function activate() {
             vm.isLoading = true;
-            NgMap.getMap().then(function (map) {
-                vm.map = map;
-            }).then(fetchLocations)
-                .finally(function () {
-                    vm.isLoading = false;
-                });
+            fetchLocations().then(function () {
+                vm.isLoading = false;
+            });
+            // NgMap.getMap().then(function (map) {
+            //     vm.map = map;
+            // }).then(fetchLocations)
+            //     .finally(function () {
+            //         vm.isLoading = false;
+            //     });
         }
 
         function fetchLocations() {
