@@ -1,4 +1,16 @@
-(function() {
+/**
+ * @memberof layout
+ * @ngdoc directive
+ * @name ht-top-nav
+ * @param  {constant} constant App Constant
+ * @description
+ *  Header of Finding Route App
+ * @example
+ *   Usage:
+ *   <ht-top-nav></ht-top-nav>
+ */
+
+(function () {
     'use strict';
 
     angular
@@ -6,7 +18,7 @@
         .directive('htTopNav', htTopNav);
 
     /* @ngInject */
-    function htTopNav ($state, constant) {
+    function htTopNav(constant) {
         var directive = {
             bindToController: true,
             controller: TopNavController,

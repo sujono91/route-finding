@@ -1,4 +1,4 @@
-/**
+<!doctype html><html>  <head>    <meta charset="utf-8">    <base href="../">    <title>JSDoc: source : dashboard.controller.js</title>    <link href="css/prettify-tomorrow.css" type="text/css" rel="stylesheet">    <link href="css/site.css" type="text/css" rel="stylesheet">  </head>  <body ng-app="">    <nav id="toc">      <input placeholder="Filter" id="filter-input" class="col12 block field" type="text">      <div class="nav-wrapper">      <h2><a href="index.html">Index</a></h2>      <ul class="module">        <!-- core -->        <h2 class="module">          <a chref="" ng-click="modulecore = !modulecore">            module: core          </a>          <i ng-cloak="" ng-show="modulecore">+</i>        </h2>        <li id="core" ng-hide="modulecore">          <ul class="group">            <h2>              <a href="" ng-click="coreservice = !coreservice">                service              </a>              <i ng-cloak="" ng-show="coreservice">+</i>            </h2>            <ul ng-hide="coreservice">              <li>                <a href="core.dataService.html">dataService</a>              </li>            </ul>          </ul>        </li>      </ul><ul class="module">        <!-- dashboard -->        <h2 class="module">          <a chref="" ng-click="moduledashboard = !moduledashboard">            module: dashboard          </a>          <i ng-cloak="" ng-show="moduledashboard">+</i>        </h2>        <li id="dashboard" ng-hide="moduledashboard">          <ul class="group">            <h2>              <a href="" ng-click="dashboardcontroller = !dashboardcontroller">                controller              </a>              <i ng-cloak="" ng-show="dashboardcontroller">+</i>            </h2>            <ul ng-hide="dashboardcontroller">              <li>                <a href="dashboard.DashboardController.html">DashboardController</a>              </li>            </ul>          </ul>        </li>      </ul><ul class="module">        <!-- layout -->        <h2 class="module">          <a chref="" ng-click="modulelayout = !modulelayout">            module: layout          </a>          <i ng-cloak="" ng-show="modulelayout">+</i>        </h2>        <li id="layout" ng-hide="modulelayout">          <ul class="group">            <h2>              <a href="" ng-click="layoutdirective = !layoutdirective">                directive              </a>              <i ng-cloak="" ng-show="layoutdirective">+</i>            </h2>            <ul ng-hide="layoutdirective">              <li>                <a href="layout.ht-top-nav.html">ht-top-nav</a>              </li>            </ul>          </ul>        </li>      </ul>      </div>    </nav>    <div id="content" class="page-wrap">      <h1 class="title">        source : dashboard.controller.js      </h1>      <div id="main" class="big-container">        <!-- source code html -->        <article>          <pre class="prettyprint source linenums"><code>/**
  * @memberof dashboard
  * @ngdoc controller
  * @name DashboardController
@@ -11,11 +11,9 @@
  */
 (function () {
     'use strict';
-
     angular
         .module('app.dashboard')
         .controller('DashboardController', DashboardController);
-
     /* @ngInject */
     function DashboardController(logger, NgMap, $window, dataService,
         constant, _) {
@@ -36,9 +34,7 @@
         /* jshint -W117 */
         var geocoder = new google.maps.Geocoder();
         var staticMapUrl = constant.STATIC_MAP_API;
-
         activate();
-
         /**
         * Fetch locations and init map
         * @memberof DashboardController
@@ -53,7 +49,6 @@
                     vm.isLoading = false;
                 });
         }
-
         /**
         * Fetch locations
         * @memberof DashboardController
@@ -63,7 +58,6 @@
         function fetchLocations() {
             return dataService.get(endpoints.LOCATIONS).then(setMarker);
         }
-
         /**
         * Set marker after fetch data
         * @memberof DashboardController
@@ -85,7 +79,6 @@
                 setWayPoints();
             });
         }
-
         /**
         * Add Marker
         * @memberof DashboardController
@@ -100,7 +93,6 @@
             });
             setWayPoints();
         }
-
         /**
         * Set way of points with stopover is true and get geocode if new marker is added
         * @memberof DashboardController
@@ -116,7 +108,6 @@
                 lat: vm.wayPoints[indexLatLngNow].location.lat,
                 lng: vm.wayPoints[indexLatLngNow].location.lng
             };
-
             if (isAdd) {
                 geocoder.geocode({
                     location: latLngNow
@@ -124,7 +115,6 @@
                 return;
             }
         }
-
         /**
         * add formatted address and call saveLocation function
         * @memberof DashboardController
@@ -141,7 +131,6 @@
             vm.destination = address;
             saveLocation();
         }
-
         /**
         * Add the location using API and give logger if success
         * @memberof DashboardController
@@ -161,7 +150,6 @@
                 vm.isLoading = false;
             });
         }
-
         /**
         * Get latest marker and call removeMarker function
         * @memberof DashboardController
@@ -173,7 +161,6 @@
                 removeMarker(id).finally(validatePopMarker);
             }
         }
-
         /**
         * Delete the location using API and give logger if success
         * @memberof DashboardController
@@ -187,7 +174,6 @@
                     logger.success('Successfully remove marker');
                 });
         }
-
         /**
         * Pop marker, wayPoints, and address and validate if markers is empty
         * @memberof DashboardController
@@ -203,7 +189,6 @@
             }
             vm.isLoading = false;
         }
-
         /**
         * Export the map using google static map API
         * @memberof DashboardController
@@ -224,3 +209,4 @@
         }
     }
 })();
+</code></pre>        </article>        <!-- index.html -->        <!-- class files -->      </div>      <footer style="clear:both">        Documentation generated by        <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.3.2</a>        using        <a href="https://github.com/allenhwkim/angular-jsdoc">Angular-JSDoc template</a>      </footer>    </div>    <script src="js/prettify.js"></script>    <script src="js/angular.min.js"></script>    <script src="js/site.js"></script>    <!--%= prettyJson %-->    <script>      prettyPrint();      var lineNo = window.location.hash.match(/#line([0-9]+)$/);      lineNo && document.querySelector("ol li:nth-child("+(lineNo[1])+")").scrollIntoView();    </script>  </body></html>
