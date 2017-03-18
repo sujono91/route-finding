@@ -26,7 +26,7 @@
         var geocoder = new google.maps.Geocoder();
         var staticMapUrl = constant.STATIC_MAP_API;
 
-        //activate();
+        activate();
 
         function activate() {
             vm.isLoading = true;
