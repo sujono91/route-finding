@@ -14,12 +14,13 @@
   },
   "dependencies": {
     "body-parser": "^1.8.2",
+    "coveralls": "~2.11.4",
     "express": "^4.9.3",
     "express-jwt": "^3.1.0",
+    "gzippo": "^0.2.0",
     "jsonwebtoken": "^5.4.0",
     "morgan": "^1.1.1",
-    "serve-favicon": "^2.0.1",
-    "coveralls": "~2.11.4"
+    "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
     "browser-sync": "^2.11.0",
