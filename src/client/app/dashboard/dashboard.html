@@ -21,25 +21,32 @@
                             </div>
                         </div>
                         <div class="panel-body">
-                            <ng-map center="{{ vm.jktGeoLocation }}"
-                                on-click="vm.pushMarker()"
-                                id="test">
-                                <marker
-                                    ng-repeat="marker in vm.markers"
-                                    position="{{marker.lat}}, {{marker.lng}}">
-                                </marker>
-                                <directions
-                                    ng-if="vm.origin !== ''"
-                                    draggable="true"
-                                    provide-route-alternatives="true"
-                                    panel="directions-panel"
-                                    suppress-markers="true"
-                                    travel-mode="DRIVING"
-                                    waypoints="{{ vm.wayPoints }}"
-                                    origin="{{ vm.origin }}"
-                                    destination="{{ vm.destination }}">
+                            <div>
+                                <ng-map
+                                    center="{{ vm.jktGeoLocation }}"
+                                    on-click="vm.pushMarker()">
+                                    <marker
+                                        ng-repeat="marker in vm.markers"
+                                        position="{{marker.lat}}, {{marker.lng}}">
+                                    </marker>
+                                    <directions
+                                        ng-if="vm.origin !== ''"
+                                        draggable="true"
+                                        provide-route-alternatives="true"
+                                        panel="directions-panel"
+                                        suppress-markers="true"
+                                        travel-mode="DRIVING"
+                                        waypoints="{{ vm.wayPoints }}"
+                                        origin="{{ vm.origin }}"
+                                        destination="{{ vm.destination }}">
                                     </directions>
-                            </ng-map>
+                                </ng-map>
+                            </div>
+                            <div class="column small-12 text-center" ng-show="vm.isLoading">
+							    <br/>
+                                <i class="fa fa-spinner fa-spin fa-4x"></i>
+                                <div><label>Loading...</label></div>
+						    </div>
                         </div>
                     </div>
                 </div>

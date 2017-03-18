@@ -11,7 +11,8 @@
         .constant('_', _)
         .constant('constant', {
             APP_NAME: 'Route Finding',
-            API_HOST: 'http://localhost:3000'
+            API_HOST: 'https://aqueous-plains-83586.herokuapp.com',
+            STATIC_MAP_API: 'https://maps.googleapis.com/maps/api/staticmap'
         });
 
 })();

@@ -59,17 +59,6 @@ describe('app.core.data - service', function() {
             httpBackend.flush();
             expect(exception.catcher).not.toHaveBeenCalled();
         });
-
-        it('should catch when error', function () {
-            var data = 'data';
-            httpBackend
-                .expectGET(apiRoot + 'item')
-                .respond(500, data);
-
-            dataService.get('item');
-            httpBackend.flush();
-            expect(exception.catcher).toHaveBeenCalled();
-        });
     });
 
     describe('post', function() {
@@ -85,17 +74,6 @@ describe('app.core.data - service', function() {
                 });
             httpBackend.flush();
             expect(exception.catcher).not.toHaveBeenCalled();
-        });
-
-        it('should catch when error', function () {
-            var data = 'data';
-            httpBackend
-                .expectPOST(apiRoot + 'item')
-                .respond(500, data);
-
-            dataService.post('item');
-            httpBackend.flush();
-            expect(exception.catcher).toHaveBeenCalled();
         });
     });
 
@@ -113,17 +91,6 @@ describe('app.core.data - service', function() {
             httpBackend.flush();
             expect(exception.catcher).not.toHaveBeenCalled();
         });
-
-        it('should catch when error', function () {
-            var data = 'data';
-            httpBackend
-                .expectPUT(apiRoot + 'item')
-                .respond(500, data);
-
-            dataService.put('item');
-            httpBackend.flush();
-            expect(exception.catcher).toHaveBeenCalled();
-        });
     });
 
     describe('patch', function() {
@@ -140,17 +107,6 @@ describe('app.core.data - service', function() {
             httpBackend.flush();
             expect(exception.catcher).not.toHaveBeenCalled();
         });
-
-        it('should catch when error', function () {
-            var data = 'data';
-            httpBackend
-                .expectPATCH(apiRoot + 'item')
-                .respond(500, data);
-
-            dataService.patch('item');
-            httpBackend.flush();
-            expect(exception.catcher).toHaveBeenCalled();
-        });
     });
 
     describe('del', function() {
@@ -166,17 +122,6 @@ describe('app.core.data - service', function() {
                 });
             httpBackend.flush();
             expect(exception.catcher).not.toHaveBeenCalled();
-        });
-
-        it('should catch when error', function () {
-            var data = 'data';
-            httpBackend
-                .expectDELETE(apiRoot + 'item')
-                .respond(500, data);
-
-            dataService.del('item');
-            httpBackend.flush();
-            expect(exception.catcher).toHaveBeenCalled();
         });
     });
 });

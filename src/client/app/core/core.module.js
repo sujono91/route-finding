@@ -7,7 +7,6 @@
             'blocks.logger',
             'blocks.router',
             'app.core.data',
-            'app.core.auth',
             'ngAnimate',
             'ngSanitize',
             'ui.router',

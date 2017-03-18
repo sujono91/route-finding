@@ -6,7 +6,7 @@
         .directive('htTopNav', htTopNav);
 
     /* @ngInject */
-    function htTopNav ($state, authService, constant) {
+    function htTopNav ($state, constant) {
         var directive = {
             bindToController: true,
             controller: TopNavController,
@@ -22,21 +22,6 @@
         function TopNavController() {
             var vm = this;
             vm.appName = constant.APP_NAME;
-            vm.isAuth = isAuth;
-            vm.logout = logout;
-            vm.isCurrent = isCurrent;
-        }
-
-        function isAuth () {
-            return authService.isAuth();
-        }
-
-        function logout () {
-            return authService.logout();
-        }
-
-        function isCurrent(route) {
-            return $state.is(route) ? 'active' : '';
         }
 
         return directive;
