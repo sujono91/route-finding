@@ -60,7 +60,7 @@ gulp serve-build
 gulp build
 ```
 
-- Generate JSDoc
+- Generate JSDoc on `docs` folder
 
 ```
 gulp docs
