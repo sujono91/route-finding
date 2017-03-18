@@ -1,12 +1,66 @@
-# Angular Starter Template
+# Angular Finding Route App
 
-[![Build Status](https://travis-ci.org/antonybudianto/angular-starter.svg?branch=master)](https://travis-ci.org/antonybudianto/angular-starter)
-[![Coverage Status](https://coveralls.io/repos/antonybudianto/angular-starter/badge.svg?branch=master&service=github)](https://coveralls.io/github/antonybudianto/angular-starter?branch=master)
-[![Dependency Status](https://david-dm.org/antonybudianto/angular-starter.svg)](https://david-dm.org/antonybudianto/angular-starter)
-[![devDependency Status](https://david-dm.org/antonybudianto/angular-starter/dev-status.svg)](https://david-dm.org/antonybudianto/angular-starter#info=devDependencies)
+Credits to:
+- Code Style: [John Papa](https://github.com/johnpapa)
+- Skeleton Template: [Antony Budianto](https://github.com/antonybudianto/angularjs-starter)
 
-Credits to [John Papa](https://github.com/johnpapa)
+### Client Technologies
+- AngularJS 1.4.8
+- AngularJSDoc 1.5.0
+- jQuery 2.1.4
+- Gulp 3.9.0
+- Bootstrap 3.3.5
+- Font Awesome 4.4.0
+- NgMap 1.18.4
+- Lodash 3.10.1
+- HTML5
+- LESS
 
-Features:
-- Authentication Service (default using JWT)
-- Authentication Middleware (auto redirect based on auth state)
+### Server Technologies (for development)
+- NodeJS 7.4.0
+- ExpressJS 4.9.3
+
+### Code Analyzer
+- JSHint (JavaScript Code Quality Tool)
+- JSCS (JavaScript Code Style Checker)
+
+### How to run in local
+- Set Environment Variable `NODE_ENV` to `build` if you wan to run the build result.
+- Set `API_HOST` in `src/client/app/core/constant.js` to you local API URL
+
+- Install NodeJS (LTS Version)
+
+- Install bower and gulp
+
+```
+npm install -g bower gulp
+```
+
+- Install dependencies (bower & npm)
+
+```
+npm install && bower install
+```
+- Run in development mode
+
+```
+gulp serve-dev
+```
+
+- Run in production mode
+
+```
+gulp serve-build
+```
+
+- Build the application
+
+```
+gulp build
+```
+
+- Generate JSDoc
+
+```
+gulp docs
+```
