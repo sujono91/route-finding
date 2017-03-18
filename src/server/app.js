@@ -47,7 +47,6 @@ switch (environment) {
         });
         // Any deep link calls should return index.html
         app.use('/*', express.static('./build/index.html'));
-        app.get('/', express.static('./build/index.html'));
         break;
     default:
         console.log('** DEV **');

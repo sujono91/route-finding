@@ -3,7 +3,6 @@ node_modules/
 bower_components/
 
 # Project generated directories
-build/
 report/
 .idea/
 
